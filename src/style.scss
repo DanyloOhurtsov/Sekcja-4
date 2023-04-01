@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 500ms;
+}
+// Base Variables
+    // COLORS
+        // Primary Colors
+        $color1: #0F162D;
+        $color2: #CA59FF;
+        $color3: #6C7CFF;
+        $color4: #2AFFFF;
+        $color5: #FFF629;
+        // Secondary Colors
+        $color6: #FFFFFF;
+        $color7: #272D42;
+        $color8: #000000;
+    // FONTS
+        // Size
+        $tSize-48: 48px;
+        $tSize-32: 32px;
+        $tSize-20: 20px;
+        $tSize-16: 16px;
+        $tSize-14: 14px;
+        // Height
+        $tHeight-56: 56px;
+        $tHeight-40: 40px;
+        $tHeight-24: 24px;
+        $tHeight-22: 22px;
+        $tHeight-20: 20px;
+        // Spacing
+        $tSpacing-2: -0.002em;
+        $tSpacing-0: 0;
+        // Weight
+        $tWeight-M: 500;
+        $tWeight-R: 400;
+        // Family
+        $tFam: 'DM Sans';
+    // STYLES
+        $bRad-24: 24px;
+        $bRad-16: 16px;
+
+body{
+    background-color: $color1;
+    padding: 48px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+#home-page{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .content{
+        max-width: 1136px;
+        min-height: 511px;
+        display: flex;
+        justify-content: space-between;
+        .textCon{
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            width: 46%;
+            h1{
+                color: $color6;
+                font-size: $tSize-48;
+                line-height: $tHeight-56;
+                font-weight: $tWeight-M;
+                letter-spacing: $tSpacing-2;
+                font-family: $tFam;
+                width: 100%;
+            }
+            p{
+                font-family: $tFam;
+                font-weight: $tWeight-R;
+                font-size: $tSize-16;
+                line-height: $tHeight-24;
+                color: $color6;
+                width: 100%;
+            }
+        }
+        .blocksCon{
+            width: 49%;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            .itemLine{
+                display: flex;
+                gap: 24px;
+                .item{
+                    width: 48%;
+                    min-height: 200px;
+                    background-color: $color7;
+                    border-radius: $bRad-24;
+                    padding: 16px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 16px;
+                    text-align: center;
+                    h3{
+                        font-family: $tFam;
+                        font-weight: $tWeight-M;
+                        font-size: $tSize-20;
+                        line-height: $tHeight-24;
+                        color: $color6;
+                    }
+                    p{
+                        font-family: $tFam;
+                        font-weight: $tWeight-R;
+                        font-size: $tSize-16;
+                        line-height: $tHeight-24;
+                        color: $color6;
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 834px) {
+    #home-page{
+        .content{
+            max-width: 496px;
+            flex-direction: column;
+            gap: 16px;
+            .textCon{
+                width: 100%;
+            }
+            .blocksCon{
+                width: 100%;
+                .itemLine{
+                    .item{
+                        p{
+                            font-size: $tSize-14;
+                            line-height: $tHeight-22;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 375px){
+    #home-page{
+        .content{
+            max-width: 343px;
+            .textCon{
+                gap: 16px;
+                h1{
+                    font-size: $tSize-32;
+                    line-height: $tHeight-40;
+                }
+            }
+            .blocksCon{
+                gap: 16px;
+                .itemLine{
+                    flex-direction: column;
+                    gap: 16px;
+                    .item{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+}
